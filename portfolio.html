@@ -29,6 +29,16 @@
           <a class="logo link" href="./index.html"
             >Web<span class="logo name">Studio</span></a
           >
+          <button
+            class="js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-open-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
           <ul class="site-nav-list list">
             <li class="site-nav-item">
               <a class="site-nav-link link" href="./index.html">Studio</a>
@@ -57,8 +67,75 @@
             </li>
           </ul>
         </address>
+        <div class="mobile-menu js-menu-container">
+          <button class="js-close-menu modal-close-button">
+            <svg class="modal-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav-list list">
+            <li class="site-nav-item">
+              <a class="site-nav-link link" href="./index.html">Studio</a>
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link link active-nav" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link link" href="">Contacts</a>
+            </li>
+          </ul>
+          <address class="address-menu">
+            <ul class="address-list list">
+              <li class="address-item phone-item">
+                <a class="address-item-link link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="address-item">
+                <a
+                  class="address-email-link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="soc-list list">
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-network-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
+
     <!-- Меню работ -->
 
     <main>
@@ -86,13 +163,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-1.jpg"
-                    alt="Banking app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-1.jpg       1x,
+                        ./images-2x/works-img-1-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-1-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-1-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-1-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-1-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-1-mob.jpg"
+                      alt="Banking app"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -110,13 +210,35 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-2.jpg"
-                    alt="Cashless Payment"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-2.jpg       1x,
+                        ./images-2x/works-img-2-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-2-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-2-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-2-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-2-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-2-mob.jpg"
+                      alt="Cashless Payment"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -134,12 +256,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    src="./images/works-img-3.jpg"
-                    alt="Meditation app"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-3.jpg       1x,
+                        ./images-2x/works-img-3-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-3-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-3-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-3-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-3-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-3-mob.jpg"
+                      alt="Meditation app"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -157,13 +303,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-4.jpg"
-                    alt="Taxi service"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-4.jpg       1x,
+                        ./images-2x/works-img-4-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-4-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-4-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-4-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-4-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-4-mob.jpg"
+                      alt="Taxi service"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -181,13 +350,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-5.jpg"
-                    alt="Screen illustrations"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-5.jpg       1x,
+                        ./images-2x/works-img-5-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-5-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-5-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-5-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-5-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-5-mob.jpg"
+                      alt="Screen illustrations"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -205,13 +397,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-6.jpg"
-                    alt="Woman takes a picture"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-6.jpg       1x,
+                        ./images-2x/works-img-6-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-6-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-6-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-6-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-6-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-6-mob.jpg"
+                      alt="Woman takes a picture"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -229,13 +444,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-7.jpg"
-                    alt="Instagram stories concept"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-7.jpg       1x,
+                        ./images-2x/works-img-7-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-7-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-7-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-7-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-7-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-7-mob.jpg"
+                      alt="Instagram stories concept"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -253,13 +491,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-8.jpg"
-                    alt="Woman is hanging vegetables"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-8.jpg       1x,
+                        ./images-2x/works-img-8-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-8-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-8-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-8-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-8-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-8-mob.jpg"
+                      alt="Woman is hanging vegetables"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -277,13 +538,36 @@
             <li class="services-item">
               <a class="services-link link" href="">
                 <div class="services-thumb">
-                  <img
-                    class="services-photo"
-                    src="./images/works-img-9.jpg"
-                    alt="A cup of coffee"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/works-img-9.jpg       1x,
+                        ./images-2x/works-img-9-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/works-img-9-tab.jpg          1x,
+                        ./images-2x/tablet-2x/works-img-9-tab-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/works-img-9-mob.jpg          1x,
+                        ./images-2x/mobile-2x/works-img-9-mob-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./images/mobile/works-img-9-mob.jpg"
+                      alt="A cup of coffee"
+                      width="396"
+                      height="280"
+                    />
+                  </picture>
+
                   <div class="services-overlay">
                     <p class="services-overlay-text">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -318,31 +602,31 @@
         </div>
         <div class="footer-soc-box">
           <p class="social-title">Social media</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+          <ul class="soc-list list">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -367,5 +651,6 @@
         </form>
       </div>
     </footer>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

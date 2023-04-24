@@ -28,6 +28,16 @@
           <a class="logo link" href="./index.html"
             >Web<span class="logo name">Studio</span></a
           >
+          <button
+            class="js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-open-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-burger"></use>
+            </svg>
+          </button>
           <ul class="site-nav-list list">
             <li class="site-nav-item">
               <a class="site-nav-link link active-nav" href="./index.html"
@@ -58,11 +68,79 @@
             </li>
           </ul>
         </address>
+        <div class="mobile-menu js-menu-container">
+          <button class="js-close-menu modal-close-button">
+            <svg class="modal-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+          <ul class="mobile-nav-list list">
+            <li class="site-nav-item">
+              <a class="site-nav-link link active-nav" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="site-nav-item">
+              <a class="site-nav-link link" href="">Contacts</a>
+            </li>
+          </ul>
+          <address class="address-menu">
+            <ul class="address-list list">
+              <li class="address-item phone-item">
+                <a class="address-item-link link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="address-item">
+                <a
+                  class="address-email-link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="soc-list list">
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item">
+                <a class="soc-network-link link" href="">
+                  <svg class="soc-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </header>
 
+    <!-- Герой -->
     <main>
-      <!-- Герой -->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -75,7 +153,7 @@
         <div class="modal-window">
           <button class="modal-close-button" type="button" data-modal-close>
             <svg class="modal-icon" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-modal"></use>
+              <use href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
           <p class="modal-text">
@@ -224,6 +302,7 @@
           <ul class="works-list list">
             <li class="works-item">
               <img
+                srcset="./images-2x/gallery-img-1-2x.jpg 2x"
                 src="./images/gallery-img-1.jpg"
                 alt="Screen with the statistics"
                 width="360"
@@ -232,6 +311,7 @@
             </li>
             <li class="works-item">
               <img
+                srcset="./images-2x/gallery-img-2-2x.jpg 2x"
                 src="./images/gallery-img-2.jpg"
                 alt="Menu"
                 width="360"
@@ -240,6 +320,7 @@
             </li>
             <li class="works-item">
               <img
+                srcset="./images-2x/gallery-img-3-2x.jpg 2x"
                 src="./images/gallery-img-3.jpg"
                 alt="Functionality"
                 width="360"
@@ -257,7 +338,7 @@
           <ul class="employees-list list">
             <li class="employee-item">
               <img
-                class="employee-photo"
+                srcset="./images-2x/worker-1-2x.jpg 2x"
                 src="./images/worker-1.jpg"
                 alt="Photo of man"
                 width="264"
@@ -300,7 +381,7 @@
             </li>
             <li class="employee-item">
               <img
-                class="employee-photo"
+                srcset="./images-2x/worker-2-2x.jpg 2x"
                 src="./images/worker-2.jpg"
                 alt="Photo of man"
                 width="264"
@@ -343,7 +424,7 @@
             </li>
             <li class="employee-item">
               <img
-                class="employee-photo"
+                srcset="./images-2x/worker-3-2x.jpg 2x"
                 src="./images/worker-3.jpg"
                 alt="Photo of woman"
                 width="264"
@@ -386,7 +467,7 @@
             </li>
             <li class="employee-item">
               <img
-                class="employee-photo"
+                srcset="./images-2x/worker-4-2x.jpg 2x"
                 src="./images/worker-4.jpg"
                 alt="Photo of man"
                 width="264"
@@ -430,6 +511,7 @@
           </ul>
         </div>
       </section>
+      <!-- Клиенты -->
       <section class="customers section">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
@@ -495,31 +577,31 @@
         </div>
         <div class="footer-soc-box">
           <p class="social-title">Social media</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+          <ul class="soc-list list">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a class="footer-soc-link link" href="">
-                <svg class="footer-soc-icon" width="24" height="24">
+            <li class="soc-item">
+              <a class="soc-link link" href="">
+                <svg class="soc-icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -544,7 +626,7 @@
         </form>
       </div>
     </footer>
-
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

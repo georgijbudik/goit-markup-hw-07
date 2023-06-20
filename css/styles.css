@@ -29,6 +29,9 @@ body {
   letter-spacing: 0.02em;
 }
 
+body.lock {
+  overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -60,6 +63,9 @@ input {
   padding: 0;
 }
 
+/* ::-webkit-scrollbar {
+  display: none;
+} */
 button {
   display: block;
   cursor: pointer;
@@ -204,6 +210,7 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 
     padding-top: 80px;
     padding-left: 40px;
